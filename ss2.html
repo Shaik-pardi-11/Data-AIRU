@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRU | AI Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 1. GLOBAL RESET --- */
+        :root {
+            --text-light: #ffffff;
+            --text-dim: #ffffffaa;
+            --primary-grad: linear-gradient(90deg, #591d66, #4054b2);
+            --glass-bg: rgba(255, 255, 255, 0.06);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            background-color: #1e1e2f;
+            color: var(--text-light);
+        }
+
+        /* Helpers */
+        .hidden { display: none !important; }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+
+        /* --- 2. AMBIENT BACKGROUND --- */
+        .background-glow {
+            position: fixed; width: 100%; height: 100%; z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(139, 28, 77, 0.6) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(45, 59, 143, 0.6) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(30, 30, 46, 1) 100%, transparent 100%);
+            filter: blur(20px);
+        }
+
+        /* --- 3. LOGIN & ACCOUNT CHOOSER STYLES --- */
+        #login-container { height: 100%; display: flex; justify-content: center; align-items: center; position: relative; z-index: 10; }
+        
+        .glass-card {
+            width: 380px; padding: 40px 35px; border-radius: 20px;
+            background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            text-align: center; animation: floatIn 0.8s ease-out; position: absolute;
+            transition: all 0.4s ease;
+        }
+        @keyframes floatIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Main Login Elements */
+        .profile-icon-circle {
+            width: 80px; height: 80px; background: rgba(255, 255, 255, 0.1); border-radius: 50%;
+            margin: 0 auto 30px auto; display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem; color: rgba(255, 255, 255, 0.8);
+        }
+        .input-group { position: relative; margin-bottom: 30px; text-align: left; }
+        .input-group i { position: absolute; left: 0; bottom: 10px; color: var(--text-light); font-size: 1rem; }
+        .glass-input {
+            width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 10px 10px 30px; color: var(--text-light); font-size: 1rem; outline: none; transition: 0.3s;
+        }
+        .glass-input:focus { border-bottom-color: #ffffff; }
+        .btn-glass-login {
+            width: 100%; padding: 12px; border-radius: 30px; border: none; background: var(--primary-grad);
+            color: white; font-size: 1rem; font-weight: 600; cursor: pointer; transition: 0.3s;
+        }
+        .btn-glass-login:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(64, 84, 178, 0.5); }
+        .social-divider { margin: 25px 0 15px 0; font-size: 0.75rem; color: rgba(255,255,255,0.4); text-align: center; }
+        .social-buttons { display: flex; gap: 15px; justify-content: center; }
+        .social-btn {
+            width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s;
+        }
+        .social-btn:hover { background: rgba(255,255,255,0.2); transform: scale(1.1); }
+        .social-btn img { width: 20px; }
+
+        /* Account Chooser Specific Styles */
+        .account-item {
+            display: flex; align-items: center; gap: 15px; padding: 12px;
+            border-radius: 12px; cursor: pointer; transition: 0.3s;
+            border: 1px solid transparent; text-align: left; margin-bottom: 10px;
+        }
+        .account-item:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1); }
+        .ac-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        .ac-info h4 { font-size: 0.95rem; font-weight: 500; color: #fff; }
+        .ac-info p { font-size: 0.8rem; color: var(--text-dim); }
+        .back-btn { 
+            position: absolute; top: 20px; left: 20px; cursor: pointer; 
+            color: var(--text-dim); font-size: 1.2rem; transition: 0.3s;
+        }
+        .back-btn:hover { color: #fff; transform: translateX(-3px); }
+
+        /* --- 4. DASHBOARD LAYOUT --- */
+        #app-dashboard { display: none; width: 100%; height: 100%; display: flex; opacity: 0; transition: opacity 1s ease; }
+        
+        .sidebar {
+            width: 260px; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px);
+            border-right: 1px solid var(--glass-border); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .logo { font-size: 1.5rem; font-weight: 600; margin-bottom: 3rem; background: var(--primary-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-item {
+            display: flex; align-items: center; gap: 15px; padding: 12px; color: var(--text-dim); text-decoration: none;
+            border-radius: 12px; margin-bottom: 10px; transition: 0.3s; cursor: pointer;
+        }
+        .nav-item:hover, .nav-item.active { background: rgba(255,255,255,0.1); color: white; border-left: 3px solid #bb86fc; }
+        .nav-item i { width: 20px; text-align: center; }
+
+        .main-content { flex: 1; padding: 2rem; overflow-y: auto; position: relative; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+        .user-pill { display: flex; align-items: center; gap: 10px; background: var(--glass-bg); padding: 8px 16px; border-radius: 30px; border: 1px solid var(--glass-border); }
+        .user-pill img { width: 30px; height: 30px; border-radius: 50%; }
+        .panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 1.5rem; backdrop-filter: blur(10px); }
+        .panel h2 { font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 10px; }
+
+        /* --- 5. PAGE SPECIFIC STYLES --- */
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .stat-card { background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 20px; backdrop-filter: blur(10px); }
+        .stat-card h3 { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 5px; }
+        .stat-card .value { font-size: 2rem; font-weight: 600; }
+        .dashboard-split { display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.5rem; }
+        .tx-item { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .tx-left { display: flex; gap: 15px; align-items: center; }
+        .tx-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+        .tx-amount { font-weight: 600; }
+        .photo-grid-mini { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .photo-card { aspect-ratio: 1; border-radius: 12px; overflow: hidden; position: relative; border: 1px solid var(--glass-border); }
+        .photo-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .photo-card:hover img { transform: scale(1.1); }
+        .credit-card {
+            background: linear-gradient(135deg, #1e1e2f, #4054b2); height: 220px; width: 380px; border-radius: 20px; padding: 25px;
+            display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 20px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 2rem; position: relative; overflow: hidden;
+        }
+        .credit-card::before { content: ''; position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+        .gallery-filters { display: flex; gap: 10px; margin-bottom: 20px; }
+        .filter-tag { padding: 8px 16px; border-radius: 20px; border: 1px solid var(--glass-border); cursor: pointer; font-size: 0.9rem; color: var(--text-dim); }
+        .filter-tag.active { background: var(--glass-bg); color: #fff; border-color: #fff; }
+        .gallery-full-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        .chart-container { height: 250px; display: flex; align-items: flex-end; gap: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--glass-border); }
+        .chart-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 10px; height: 100%; justify-content: flex-end; }
+        .chart-bar { width: 100%; background: var(--primary-grad); border-radius: 8px 8px 0 0; opacity: 0.7; transition: 0.3s; position: relative; }
+        .chart-bar:hover { opacity: 1; }
+
+        /* --- 6. AI CHATBOT --- */
+        .ai-fab {
+            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+            background: var(--primary-grad); border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 100; transition: 0.3s;
+        }
+        .ai-fab:hover { transform: scale(1.1); }
+        .ai-window {
+            position: fixed; bottom: 100px; right: 30px; width: 350px; height: 500px;
+            background: #18181b; border: 1px solid var(--glass-border); border-radius: 20px;
+            display: flex; flex-direction: column; z-index: 99; transform-origin: bottom right;
+            transform: scale(0); transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .ai-window.open { transform: scale(1); }
+        .ai-header { padding: 15px; background: rgba(255,255,255,0.05); border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center; }
+        .ai-body { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+        .msg { padding: 10px 15px; border-radius: 12px; font-size: 0.9rem; max-width: 80%; }
+        .msg.bot { background: rgba(255,255,255,0.1); align-self: flex-start; border-bottom-left-radius: 2px; }
+        .msg.user { background: #6366f1; align-self: flex-end; border-bottom-right-radius: 2px; }
+        .ai-footer { padding: 10px; border-top: 1px solid var(--glass-border); display: flex; gap: 10px; }
+        .ai-input { flex: 1; background: rgba(0,0,0,0.3); border: none; padding: 10px; border-radius: 8px; color: white; outline: none; }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <div id="login-container">
+        
+        <div class="glass-card" id="login-form">
+            <div class="profile-icon-circle"><i class="fa-solid fa-user"></i></div>
+            <div class="input-group">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" class="glass-input" placeholder="Email ID" value="admin@airu.com">
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" class="glass-input" placeholder="Password" value="123456">
+            </div>
+            <button class="btn-glass-login" onclick="login()">LOGIN</button>
+            <div class="social-divider">OR CONNECT WITH</div>
+            <div class="social-buttons">
+                <div class="social-btn" onclick="showGoogleAccounts()"><img src="https://www.svgrepo.com/show/475656/google-color.svg"></div>
+                <div class="social-btn" onclick="login()"><i class="fa-brands fa-github"></i></div>
+                <div class="social-btn" onclick="login()"><i class="fa-brands fa-apple"></i></div>
+            </div>
+        </div>
+
+        <div class="glass-card" id="google-accounts" style="display: none; opacity: 0;">
+            <i class="fa-solid fa-arrow-left back-btn" onclick="showLoginForm()"></i>
+            <h2 style="margin-bottom: 2rem;">Choose an account</h2>
+            
+            <div class="account-item" onclick="login('Rohan Das', 'https://randomuser.me/api/portraits/men/32.jpg')">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="ac-avatar">
+                <div class="ac-info">
+                    <h4>Rohan Das</h4>
+                    <p>rohan.das@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="account-item" onclick="login('Sarah Design', 'https://randomuser.me/api/portraits/women/44.jpg')">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="ac-avatar">
+                <div class="ac-info">
+                    <h4>Sarah Design</h4>
+                    <p>sarah.work@airu.com</p>
+                </div>
+            </div>
+
+            <div class="account-item" style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 15px; padding-top: 15px;" onclick="login()">
+                <div class="ac-avatar" style="background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-user-plus"></i></div>
+                <div class="ac-info">
+                    <h4>Use another account</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="app-dashboard" style="display: none;">
+        <nav class="sidebar">
+            <div>
+                <div class="logo">AIRU.</div>
+                <div class="nav-item active" onclick="switchPage('dashboard', this)"><i class="fa-solid fa-grid-2"></i> Dashboard</div>
+                <div class="nav-item" onclick="switchPage('wallet', this)"><i class="fa-solid fa-wallet"></i> Wallet</div>
+                <div class="nav-item" onclick="switchPage('gallery', this)"><i class="fa-solid fa-images"></i> Gallery</div>
+                <div class="nav-item" onclick="switchPage('analytics', this)"><i class="fa-solid fa-chart-pie"></i> Analytics</div>
+            </div>
+            <div class="nav-item" onclick="location.reload()" style="color: #ef4444;"><i class="fa-solid fa-right-from-bracket"></i> Logout</div>
+        </nav>
+
+        <main class="main-content">
+            <header class="header">
+                <div>
+                    <h1 id="page-title">Overview</h1>
+                    <p style="color: var(--text-dim);">Your digital life at a glance</p>
+                </div>
+                <div class="user-pill" id="user-display-pill">
+                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=random" id="user-avatar-img">
+                    <span id="user-name-text">Admin User</span>
+                </div>
+            </header>
+
+            <div id="view-dashboard" class="page-view fade-in">
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>Total Spend (Oct)</h3><div class="value">₹12,450</div></div>
+                    <div class="stat-card"><h3>Memories Synced</h3><div class="value">482</div></div>
+                    <div class="stat-card"><h3>Linked Events</h3><div class="value">15</div></div>
+                </div>
+                <div class="dashboard-split">
+                    <div class="panel">
+                        <h2>Recent Transactions</h2>
+                        <div class="tx-item"><div class="tx-left"><div class="tx-icon" style="color: #4ade80;"><i class="fa-brands fa-spotify"></i></div><div class="tx-details"><h4>Spotify Premium</h4><p>14 Oct • UPI</p></div></div><div class="tx-amount">-₹119</div></div>
+                        <div class="tx-item"><div class="tx-left"><div class="tx-icon" style="color: #f87171;"><i class="fa-solid fa-burger"></i></div><div class="tx-details"><h4>McDonald's</h4><p>13 Oct • GPay</p></div></div><div class="tx-amount">-₹450</div></div>
+                    </div>
+                    <div class="panel">
+                        <h2>Visual Feed</h2>
+                        <div class="photo-grid-mini">
+                            <div class="photo-card"><img src="https://picsum.photos/300/300?random=1"></div>
+                            <div class="photo-card"><img src="https://picsum.photos/300/300?random=2"></div>
+                            <div class="photo-card"><img src="https://picsum.photos/300/300?random=3"></div>
+                            <div class="photo-card"><img src="https://picsum.photos/300/300?random=4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-wallet" class="page-view hidden fade-in">
+                <div style="display:flex; gap: 2rem; align-items:flex-start;">
+                    <div class="credit-card">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <i class="fa-brands fa-cc-visa" style="font-size:2rem; color:white;"></i>
+                            <span style="font-size:0.9rem; opacity:0.8;">Platinum</span>
+                        </div>
+                        <div style="font-size:1.4rem; letter-spacing:2px; margin-top:10px;">4522 •••• •••• 9012</div>
+                        <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-top:20px;">
+                            <span>VALID THRU<br><b>12/28</b></span>
+                            <span style="text-align:right;">HOLDER<br><b>ROHAN DAS</b></span>
+                        </div>
+                    </div>
+                    <div class="panel" style="flex:1; height: 220px; display:flex; flex-direction:column; justify-content:center;">
+                        <h3 style="color:var(--text-dim);">Available Balance</h3>
+                        <div style="font-size:3rem; font-weight:700;">₹84,320.50</div>
+                        <div style="margin-top:10px;"><span style="color:var(--accent-green);"><i class="fa-solid fa-arrow-trend-up"></i> +₹12,000</span> this month</div>
+                    </div>
+                </div>
+                <div class="panel" style="margin-top:2rem;">
+                    <h2>Full Transaction History</h2>
+                    <div class="tx-item"><div class="tx-left"><div class="tx-icon"><i class="fa-solid fa-apple-whole"></i></div><div class="tx-details"><h4>Apple Store</h4><p>Yesterday • Electronics</p></div></div><div class="tx-amount">-₹89,900</div></div>
+                    <div class="tx-item"><div class="tx-left"><div class="tx-icon"><i class="fa-solid fa-briefcase"></i></div><div class="tx-details"><h4>Salary Credit</h4><p>01 Oct • Wire</p></div></div><div class="tx-amount" style="color:var(--accent-green);">+₹1,20,000</div></div>
+                </div>
+            </div>
+
+            <div id="view-gallery" class="page-view hidden fade-in">
+                <div class="gallery-filters">
+                    <div class="filter-tag active">All Photos</div><div class="filter-tag">Favorites</div><div class="filter-tag">Locations</div><div class="filter-tag">Receipts</div>
+                </div>
+                <div class="gallery-full-grid">
+                    <div class="photo-card"><img src="https://picsum.photos/400/400?random=10"></div>
+                    <div class="photo-card"><img src="https://picsum.photos/400/400?random=11"></div>
+                    <div class="photo-card"><img src="https://picsum.photos/400/400?random=12"></div>
+                    <div class="photo-card"><img src="https://picsum.photos/400/400?random=13"></div>
+                    <div class="photo-card"><img src="https://picsum.photos/400/400?random=14"></div>
+                    <div class="photo-card"><img src="https://picsum.photos/400/400?random=15"></div>
+                    <div class="photo-card"><img src="https://picsum.photos/400/400?random=16"></div>
+                    <div class="photo-card"><img src="https://picsum.photos/400/400?random=17"></div>
+                </div>
+            </div>
+
+            <div id="view-analytics" class="page-view hidden fade-in">
+                <div class="panel">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:20px;">
+                        <h2>Spending Analysis</h2>
+                        <select style="background:rgba(255,255,255,0.1); color:white; border:none; padding:5px; border-radius:5px;"><option>Last 6 Months</option></select>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-bar-wrap"><div class="chart-bar" style="height: 40%;" data-val="₹4k"></div><span>May</span></div>
+                        <div class="chart-bar-wrap"><div class="chart-bar" style="height: 60%;" data-val="₹6k"></div><span>Jun</span></div>
+                        <div class="chart-bar-wrap"><div class="chart-bar" style="height: 30%;" data-val="₹3k"></div><span>Jul</span></div>
+                        <div class="chart-bar-wrap"><div class="chart-bar" style="height: 80%;" data-val="₹8k"></div><span>Aug</span></div>
+                        <div class="chart-bar-wrap"><div class="chart-bar" style="height: 50%;" data-val="₹5k"></div><span>Sep</span></div>
+                        <div class="chart-bar-wrap"><div class="chart-bar" style="height: 90%; background:#ef4444;" data-val="₹12k"></div><span>Oct</span></div>
+                    </div>
+                </div>
+                <div class="dashboard-split" style="margin-top:1.5rem;">
+                    <div class="panel">
+                        <h2>Top Categories</h2>
+                        <div style="margin-top:15px;"><div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span>Electronics</span> <span>55%</span></div><div style="width:100%; height:8px; background:rgba(255,255,255,0.1); border-radius:4px;"><div style="width:55%; height:100%; background:#6366f1; border-radius:4px;"></div></div></div>
+                        <div style="margin-top:15px;"><div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span>Food & Dining</span> <span>25%</span></div><div style="width:100%; height:8px; background:rgba(255,255,255,0.1); border-radius:4px;"><div style="width:25%; height:100%; background:#ec4899; border-radius:4px;"></div></div></div>
+                    </div>
+                    <div class="panel" style="background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(168,85,247,0.2)); border-color:#6366f1;">
+                        <h2><i class="fa-solid fa-wand-magic-sparkles"></i> AI Insight</h2>
+                        <p style="margin-top:10px; line-height:1.6; color:#e0e7ff;">Your spending spike in <b>October</b> is due to a large purchase at <i>Apple Store</i>. Excluding that, your monthly average is stable at ₹5,200.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="ai-fab" onclick="toggleChat()"><i class="fa-solid fa-robot"></i></div>
+    <div class="ai-window" id="ai-window">
+        <div class="ai-header"><strong><i class="fa-solid fa-circle-nodes"></i> ChronoBot</strong><i class="fa-solid fa-xmark" style="cursor:pointer;" onclick="toggleChat()"></i></div>
+        <div class="ai-body" id="chat-body"><div class="msg bot">Hello! I analyze your wallet and photos. Ask me "How much did I spend on Food?"</div></div>
+        <div class="ai-footer">
+            <input type="text" class="ai-input" id="chat-input" placeholder="Type a message..." onkeypress="handleEnter(event)">
+            <i class="fa-solid fa-paper-plane" style="cursor:pointer; color:var(--text-dim);" onclick="sendMsg()"></i>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. LOGIN & ACCOUNT SWITCHING ---
+        const loginContainer = document.getElementById('login-container');
+        const loginForm = document.getElementById('login-form');
+        const googleAccounts = document.getElementById('google-accounts');
+        const dashboard = document.getElementById('app-dashboard');
+        const userDisplayImg = document.getElementById('user-avatar-img');
+        const userDisplayName = document.getElementById('user-name-text');
+
+        function showGoogleAccounts() {
+            loginForm.style.opacity = '0';
+            loginForm.style.transform = 'scale(0.9)';
+            
+            setTimeout(() => {
+                loginForm.style.display = 'none';
+                googleAccounts.style.display = 'block';
+                // Trigger reflow
+                void googleAccounts.offsetWidth;
+                googleAccounts.style.opacity = '1';
+                googleAccounts.style.transform = 'translateY(0)';
+            }, 300);
+        }
+
+        function showLoginForm() {
+            googleAccounts.style.opacity = '0';
+            setTimeout(() => {
+                googleAccounts.style.display = 'none';
+                loginForm.style.display = 'block';
+                void loginForm.offsetWidth;
+                loginForm.style.opacity = '1';
+                loginForm.style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        function login(name, avatar) {
+            // Optional: Update dashboard user with clicked account details
+            if(name && avatar) {
+                userDisplayName.innerText = name;
+                userDisplayImg.src = avatar;
+            }
+
+            // Animate transition
+            const currentCard = googleAccounts.style.display === 'block' ? googleAccounts : loginForm;
+            currentCard.style.transition = 'all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+            currentCard.style.transform = 'scale(0.8) translateY(-50px)';
+            currentCard.style.opacity = '0';
+
+            setTimeout(() => {
+                loginContainer.style.display = 'none';
+                dashboard.style.display = 'flex';
+                setTimeout(() => { dashboard.style.opacity = '1'; }, 50);
+            }, 500);
+        }
+
+        // --- 2. DASHBOARD NAVIGATION ---
+        function switchPage(pageId, navElement) {
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+            navElement.classList.add('active');
+
+            document.querySelectorAll('.page-view').forEach(el => el.classList.add('hidden'));
+            document.getElementById('view-' + pageId).classList.remove('hidden');
+
+            const titles = {'dashboard': 'Overview', 'wallet': 'My Wallet', 'gallery': 'Photo Gallery', 'analytics': 'Financial Analytics'};
+            document.getElementById('page-title').innerText = titles[pageId];
+        }
+
+        // --- 3. AI CHATBOT ---
+        function toggleChat() { document.getElementById('ai-window').classList.toggle('open'); }
+        function handleEnter(e) { if(e.key === 'Enter') sendMsg(); }
+        function sendMsg() {
+            const input = document.getElementById('chat-input');
+            const body = document.getElementById('chat-body');
+            const txt = input.value.trim();
+            if(!txt) return;
+
+            const uDiv = document.createElement('div');
+            uDiv.className = 'msg user'; uDiv.innerText = txt; body.appendChild(uDiv);
+            input.value = '';
+
+            setTimeout(() => {
+                const bDiv = document.createElement('div');
+                bDiv.className = 'msg bot';
+                if(txt.toLowerCase().includes('spend')) bDiv.innerText = "You spent ₹12,450 this month. Highest category: Electronics (55%).";
+                else if(txt.toLowerCase().includes('photo')) bDiv.innerText = "I found 482 photos. 15 match your transaction locations.";
+                else bDiv.innerText = "I can track expenses and photos. Try asking about your spending.";
+                body.appendChild(bDiv);
+                body.scrollTop = body.scrollHeight;
+            }, 800);
+        }
+    </script>
+
+</body>
+</html>
