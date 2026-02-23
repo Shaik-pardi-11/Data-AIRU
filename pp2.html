@@ -1,0 +1,180 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <link rel="stylesheet" href="style.css"> 
+ <title>My Restaurant</title> 
+</head> 
+<body> 
+ <header> 
+  <h1>Welcome to My Restaurant</h1> 
+  <nav> 
+   <a href="#h1">Home</a> 
+   <a href="#m1">Menu</a> 
+   <a href="#c1">Contact Us</a> 
+  </nav> 
+ </header> 
+  
+ <main> 
+<div id="grad2"> 
+ 
+  <h2>About Us</h2></div> 
+  <p>My Restaurant is a new restaurant opening soon in your city. Our 
+mission is to provide our customers with delicious food and excellent service in a 
+comfortable and friendly environment.</p> 
+  <img src="restaurant-image.jpeg" alt="Restaurant Image"> 
+</div> 
+ </main> 
+ <h2 id="m1">MENU</h2 
+ <section> 
+  <div class="menu-item"> 
+   <img src="menu-item1.jpeg" alt="Pizza image"> 
+   <h3>pizza</h3> 
+   <p>If you’re a vegetarian, you’ll love Domino’s Veg Extravaganza, 
+Indi Tandoori Paneer, and Mexican Green Wave. For non-vegetarians, Non-Veg 
+Supreme, Chicken Fiesta, and Indi Chicken Tikka top the list. Though these are the 
+most loved Domino’s pizzas along with the cheesy Margherita pizza, you should 
+check out the Domino’s menu to see what you like the most.</p> 
+  </div> 
+  <div class="menu-item"> 
+   <img src="menu-item1.jpeg" alt="burger image"> 
+   <h3>Burger</h3> 
+   <p>Nine Different Types of Burgers to Make 
+Turkey burger. ... 
+Portobello mushroom burger. ... 
+Veggie burger. ... 
+Wild salmon burger. ... 
+Bean burger. ... 
+Cheeseburger</p> 
+</div> 
+// Make one division for pasta 
+</section> 
+<section> 
+<div id="grad1"> 
+<h1 id="c1"> contact us</h1> 
+</div> 
+<div id="rot"> 
+<h1> feedback</h1></div> 
+</section> 
+<footer> 
+<p>&copy; 2023 My Restaurant</p> 
+</footer> 
+</body> 
+</html> 
+Output : style.css 
+/* General styles */  ( use external CSS) 
+body { 
+font-family: Arial, sans-serif; 
+margin: 0; 
+padding: 0; 
+} 
+#rot{ 
+transform: rotate(20deg); 
+} 
+#grad1 { 
+height: 200px; 
+background-color: red; /* For browsers that do not support gradients */ 
+background-image: linear-gradient(blue, yellow); 
+background-image: conic-gradient(red, yellow, orange); 
+} 
+#grad2 { 
+height: 200px; 
+background-color: red; /* For browsers that do not support gradients */ 
+background-image: linear-gradient(black, red); 
+} 
+/* Header styles */ 
+header { 
+background-color: #333; 
+color: white; 
+padding: 20px; 
+} 
+nav a { 
+ color: white; 
+ text-decoration: none; 
+ margin-right: 20px; 
+} 
+nav a:hover { 
+ color: #ffcc00; 
+} 
+ 
+/* Main section styles */ 
+main { 
+ background-color: #eee; 
+ padding: 50px; 
+ text-align: center; 
+} 
+main h2 { 
+ color: #333; 
+ font-size: 36px; 
+ margin-bottom: 20px; 
+} 
+main p { 
+ color: #666; 
+ font-size: 18px; 
+ line-height: 1.5; 
+ margin-bottom: 50px; 
+} 
+main img { 
+ max-width: 100%; 
+ height: auto; 
+ margin-top: 20px; 
+ box-shadow: 0px 0px 10px #333; 
+} 
+ 
+/* Menu section styles */ 
+section { 
+ display: flex; 
+ flex-wrap: wrap; 
+ justify-content: space-around; 
+ background-color: #fff; 
+ padding: 50px; 
+} 
+.menu-item { 
+ flex-basis: 30%; 
+ margin-bottom: 50px; 
+ box-shadow: 0px 0px 10px #999; 
+ padding: 20px; 
+ text-align: center; 
+} 
+.menu-item img { 
+ max-width: 100%; 
+ height: auto; 
+ margin-bottom: 20px; 
+} 
+.menu-item h3 { 
+ color: #333; 
+font-size: 24px; 
+margin-bottom: 10px; 
+} 
+.menu-item p { 
+color: #666; 
+font-size: 16px; 
+line-height: 1.5; 
+} 
+/* Footer styles */ 
+footer { 
+background-color: #333; 
+color: white; 
+padding: 20px; 
+text-align: center; 
+} 
+footer p { 
+font-size: 14px; 
+margin: 0; 
+} 
+/* Gradient styles */ 
+header { 
+background: linear-gradient(to bottom, #333 0%, #666 100%); 
+} 
+nav a:hover { 
+background: linear-gradient(to bottom, #ffcc00 0%, #ff9900 100%); 
+} 
+section { 
+background: radial-gradient(circle, #fff 0%, #eee 100%); 
+} 
+.menu-item:hover { 
+background: linear-gradient(to bottom, #eee 0%, #fff 100%); 
+transform: translateY(-5px); 
+} 
+footer { 
+background: linear-gradient(to bottom, #666 0%, #333 100%); 
+} 
