@@ -1,5 +1,0 @@
-Problem Statement (Short Version):
-
-Autonomous navigation in dynamic environments remains a critical challenge due to the inherently reactive nature of conventional Deep Q-Network (DQN) algorithms. Existing reward mechanisms penalize agents only after collisions occur, resulting in delayed and unsafe decision-making when interacting with moving obstacles. This limitation hinders their applicability in real-world, safety-critical domains such as autonomous vehicles and robotics.
-
-To overcome this, there is a need for a proactive, risk-aware navigation framework that enables agents to anticipate obstacle trajectories and evaluate potential risks in advance. Such an approach aims to enhance safety, efficiency, and real-world adaptability by shifting from reactive to predictive decision-making.
