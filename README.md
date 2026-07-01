@@ -1,172 +1,204 @@
-# <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"> Hi, I'm Shaik Pardi
+# 👋 Hi, I'm Shaik Pardi
 
-<h3 align="center">
-🚀 AI & Machine Learning Enthusiast | Full Stack Developer | B.Tech CSE (AI & ML)
-</h3>
-
+```{=html}
 <p align="center">
-Passionate about building intelligent systems that solve real-world problems through Artificial Intelligence, Machine Learning, Deep Learning, Reinforcement Learning, Computer Vision, and Full Stack Development.
+```
+`<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=F7C52B&center=true&vCenter=true&width=900&lines=AI+%26+Machine+Learning+Engineer;Full+Stack+Developer;Computer+Vision+%7C+NLP+%7C+Reinforcement+Learning;Always+Learning.+Always+Building." />`{=html}
+```{=html}
 </p>
+```
+```{=html}
+<p align="center">
+```
+`<img src="https://komarev.com/ghpvc/?username=Shaik-pardi-11&style=for-the-badge&color=gold"/>`{=html}
+`<img src="https://img.shields.io/github/followers/Shaik-pardi-11?style=for-the-badge"/>`{=html}
+`<img src="https://img.shields.io/github/stars/Shaik-pardi-11?style=for-the-badge"/>`{=html}
+```{=html}
+</p>
+```
 
----
+------------------------------------------------------------------------
 
-## 👨‍💻 About Me
+# 🚀 About Me
 
-* 🎓 B.Tech in Computer Science & Engineering (AI & ML)
-* 💡 Passionate about Artificial Intelligence and Data Science
-* 🤖 Building real-world AI-powered applications
-* 🧠 Exploring Reinforcement Learning, NLP, Computer Vision, and Generative AI
-* 🌐 Full Stack Developer using React, Next.js, Node.js, and Python
-* 📊 Interested in Data Analytics and Predictive Modeling
-* 🔍 Always learning emerging technologies and research
-* 🎯 Goal: Build impactful AI solutions that improve everyday life
+I am a **B.Tech CSE (AI & ML)** student passionate about solving
+real-world problems with Artificial Intelligence.
 
----
+-   🤖 Artificial Intelligence
+-   🧠 Machine Learning
+-   👁 Computer Vision
+-   💬 NLP
+-   🎯 Reinforcement Learning
+-   🌐 Full Stack Development
+-   📊 Data Science
+-   ☁ Cloud Computing
 
-## 🚀 Tech Stack
+------------------------------------------------------------------------
 
-### Languages
+# 🛠 Tech Stack
 
+## Languages
+
+![Python](https://skillicons.dev/icons?i=python)
+![Java](https://skillicons.dev/icons?i=java)
+![C](https://skillicons.dev/icons?i=c)
+![CPP](https://skillicons.dev/icons?i=cpp)
+![JS](https://skillicons.dev/icons?i=javascript)
+![TS](https://skillicons.dev/icons?i=typescript)
+![HTML](https://skillicons.dev/icons?i=html)
+![CSS](https://skillicons.dev/icons?i=css)
+
+## Frameworks
+
+```{=html}
 <p>
-<img src="https://skillicons.dev/icons?i=python,java,javascript,typescript,c,cpp,html,css,sql" />
+```
+`<img src="https://skillicons.dev/icons?i=react,nextjs,nodejs,express,mongodb,mysql,tailwind,tensorflow,pytorch,git,github,vscode,linux"/>`{=html}
+```{=html}
 </p>
+```
 
-### AI / Machine Learning
+------------------------------------------------------------------------
 
-<p>
-<img src="https://skillicons.dev/icons?i=tensorflow,pytorch" />
-<img src="https://img.shields.io/badge/XGBoost-FFB000?style=for-the-badge&logo=xgboost&logoColor=white"/>
-<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
-<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/>
-<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
-<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
-</p>
+# 🔥 Current Focus
 
-### Web Development
+-   Generative AI
+-   Vision Transformers
+-   LLM Applications
+-   AI Agents
+-   Reinforcement Learning
+-   Real-time Computer Vision
+-   Intelligent Automation
 
-<p>
-<img src="https://skillicons.dev/icons?i=react,nextjs,nodejs,express,mongodb,mysql,tailwind" />
-</p>
+------------------------------------------------------------------------
 
-### Tools
+# 📂 Featured Projects
 
-<p>
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,figma,linux" />
-</p>
+  Project                       Description
+  ----------------------------- ---------------------------------
+  🚦 VisionZero                 AI Accident Severity Prediction
+  🎓 AI Tutor                   Personalized Learning Platform
+  📚 WikiQA                     NLP Question Answering
+  🤖 Hand Gesture Recognition   Real-time CV
+  🧩 RL Maze                    Reinforcement Learning
+  ⚡ HVAC Optimization          Sustainable AI
 
----
+------------------------------------------------------------------------
 
-## 🧠 Areas of Interest
+# 📊 GitHub Stats
 
-* Artificial Intelligence
-* Machine Learning
-* Deep Learning
-* Reinforcement Learning
-* Natural Language Processing
-* Computer Vision
-* Data Science
-* Generative AI
-* Full Stack Development
-* Cloud Computing
-
----
-
-## 💼 Featured Projects
-
-### 🚦 VisionZero
-
-AI-powered Road Accident Severity Prediction using XGBoost and Feature Engineering.
-
-### 🎓 AI Tutor
-
-Personalized AI learning assistant that adapts according to student performance.
-
-### 📚 WikiQA
-
-Question Answering System using NLP and Transformer Models.
-
-### 🤖 Hand Gesture Recognition
-
-Real-time Computer Vision application for gesture recognition.
-
-### 🧩 Reinforcement Learning Projects
-
-Dynamic Maze Solver, HVAC Energy Optimization, and Risk-Aware Decision Systems.
-
----
-
-## 📈 GitHub Analytics
-
+```{=html}
 <p align="center">
+```
+`<img height="170" src="https://github-readme-stats.vercel.app/api?username=Shaik-pardi-11&show_icons=true&theme=tokyonight"/>`{=html}
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=Shaik-pardi-11&show_icons=true&theme=tokyonight&hide_border=true"/>
+`<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=Shaik-pardi-11&theme=tokyonight"/>`{=html}
 
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=Shaik-pardi-11&theme=tokyonight&hide_border=true"/>
-
+```{=html}
 </p>
+```
 
+------------------------------------------------------------------------
+
+# 📈 Languages
+
+```{=html}
 <p align="center">
+```
+`<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shaik-pardi-11&layout=compact&theme=tokyonight"/>`{=html}
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shaik-pardi-11&layout=compact&theme=tokyonight&hide_border=true"/>
-
+```{=html}
 </p>
+```
 
----
+------------------------------------------------------------------------
 
-## 🏆 GitHub Trophies
+# 🏆 GitHub Trophies
 
+```{=html}
 <p align="center">
+```
+`<img src="https://github-profile-trophy.vercel.app/?username=Shaik-pardi-11&theme=tokyonight&row=2&column=4"/>`{=html}
 
-<img src="https://github-profile-trophy.vercel.app/?username=Shaik-pardi-11&theme=tokyonight&no-frame=true&row=2&column=4"/>
-
+```{=html}
 </p>
+```
 
----
+------------------------------------------------------------------------
 
-## 📊 Contribution Graph
+# 📉 Activity Graph
 
+```{=html}
 <p align="center">
+```
+`<img src="https://github-readme-activity-graph.vercel.app/graph?username=Shaik-pardi-11&theme=tokyo-night"/>`{=html}
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Shaik-pardi-11&theme=tokyo-night"/>
-
+```{=html}
 </p>
+```
 
----
+------------------------------------------------------------------------
 
-## 🌍 Connect With Me
+# 🐍 Contribution Snake
 
-<p>
+``` text
+Enable with GitHub Actions:
+Platane/snk
+```
 
-<a href="https://github.com/Shaik-pardi-11">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
-</a>
+------------------------------------------------------------------------
 
-<a href="https://www.linkedin.com/">
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin"/>
-</a>
+# 🎯 2026 Goals
 
-<a href="mailto:your-email@example.com">
-<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
+-   ✅ Publish AI projects
+-   ✅ Contribute to Open Source
+-   ✅ Master Deep Learning
+-   ✅ Learn MLOps
+-   ✅ Build AI SaaS
+-   ✅ Research Reinforcement Learning
+-   ✅ Solve 1000+ LeetCode problems
 
-</p>
+------------------------------------------------------------------------
 
----
+# 📚 Currently Learning
 
-## 💡 Quote
+-   LLM Fine-tuning
+-   RAG
+-   LangChain
+-   Multi-Agent Systems
+-   CUDA
+-   Kubernetes
+-   Docker
 
-> *"Success is built one commit at a time. Keep learning, keep building, and never stop improving."*
+------------------------------------------------------------------------
 
----
+# 💡 Developer Philosophy
 
+> Build solutions that create measurable impact.
+
+------------------------------------------------------------------------
+
+# 🌍 Connect
+
+-   GitHub: https://github.com/Shaik-pardi-11
+-   LinkedIn: Add your profile
+-   Email: Add your email
+
+------------------------------------------------------------------------
+
+# ⚡ Fun Facts
+
+-   💻 I enjoy building AI systems.
+-   📖 I learn something new every day.
+-   🎯 I value clean, scalable code.
+-   🚀 I love turning ideas into products.
+
+------------------------------------------------------------------------
+
+```{=html}
 <p align="center">
-
-<img src="https://komarev.com/ghpvc/?username=Shaik-pardi-11&label=Profile+Views&color=blueviolet&style=for-the-badge"/>
-
+```
+⭐ Thanks for visiting my profile! ⭐
+```{=html}
 </p>
-
----
-
-<h3 align="center">
-⭐ If you like my projects, consider giving them a star!
-</h3>
+```
