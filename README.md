@@ -27,22 +27,17 @@ I'm a **B.Tech student** building intelligent systems and practical applications
 <table>
 <tr>
 <td width="50%" valign="top">
-
-** Education** — B.Tech Student
-** Focus Areas** — Full-Stack Dev · ML · AI Applications
-** Research Interests** — Autonomous Systems, Healthcare AI, AgriTech, Mental Health Analytics, Traffic Safety
-
+<strong>🎓 Education</strong> — B.Tech Student<br/>
+<strong>🎯 Focus Areas</strong> — Full-Stack Dev · ML · AI Applications<br/>
+<strong>🔬 Research Interests</strong> — Autonomous Systems, Healthcare AI, AgriTech, Mental Health Analytics, Traffic Safety
 </td>
 <td width="50%" valign="top">
-
-** Philosophy** — Clean, efficient, maintainable code
-** Passion** — Shipping ideas as deployable products
-** Activity** — 20 repos · 6+ featured projects · open to collabs
-
+<strong>🧭 Philosophy</strong> — Clean, efficient, maintainable code<br/>
+<strong>🚀 Passion</strong> — Shipping ideas as deployable products<br/>
+<strong>📊 Activity</strong> — 20 repos · 6+ featured projects · open to collabs
 </td>
 </tr>
 </table>
-
 <br/>
 
 ##  Technical Skills
