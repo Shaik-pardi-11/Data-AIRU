@@ -17,7 +17,7 @@
 [![Location](https://img.shields.io/badge/Bangalore%2C_India-0d1117?style=for-the-badge&logo=googlemaps&logoColor=EA4335)]()
 
 </div>
-
+.
 <br/>
 
 ##  About Me
