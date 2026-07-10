@@ -104,14 +104,14 @@ I'm a **B.Tech student** building intelligent systems and practical applications
 <td width="50%" valign="top">
 
 **[🧭 Predictive Risk-Aware DQN for Dynamic Obstacle Avoidance](https://github.com/Shaik-pardi-11/Predictive-Risk-Aware-DQN-for-Dynamic-Obstacle-Avoidance)**
-Reinforcement learning for autonomous navigation — compares Standard DQN vs. Risk-Aware DQN under moving obstacles.
+<br>Reinforcement learning for autonomous navigation — compares Standard DQN vs. Risk-Aware DQN under moving obstacles.
 `Python` `RL` `DQN`
 
 </td>
 <td width="50%" valign="top">
 
 **[🧠 MindGuard-AI](https://github.com/Shaik-pardi-11/MindGuard-AI)**
-Full-stack mental health analytics app with a FastAPI backend and AI-powered burnout prediction.
+<br>Full-stack mental health analytics app with a FastAPI backend and AI-powered burnout prediction.
 `FastAPI` `ML` `Full-Stack`
 
 </td>
