@@ -215,3 +215,140 @@ Open To:
 </p>
 
 ---
+
+# 🚀 Featured Projects
+
+<table>
+<tr>
+<td width="50%">
+
+### 🧠 MindGuard AI
+AI-powered mental health analytics platform with burnout prediction using Machine Learning.
+
+**Tech Stack:** FastAPI • Python • ML • HTML • CSS
+
+🔗 **Repository:**  
+https://github.com/Shaik-pardi-11/MindGuard-AI
+
+</td>
+
+<td width="50%">
+
+### 🚗 VisionZero
+Accident severity prediction system that helps improve road safety through Machine Learning.
+
+**Tech Stack:** Python • Scikit-Learn • Pandas • NumPy
+
+🔗 **Repository:**  
+https://github.com/Shaik-pardi-11/VisionZero-Accident-Severity-Predictor-software
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### 🤖 Risk-Aware DQN
+Deep Reinforcement Learning project for autonomous navigation with dynamic obstacle avoidance.
+
+**Tech Stack:** Python • PyTorch • RL
+
+🔗 **Repository:**  
+https://github.com/Shaik-pardi-11/Predictive-Risk-Aware-DQN-for-Dynamic-Obstacle-Avoidance
+
+</td>
+
+<td width="50%">
+
+### 🌿 Plant Disease Prediction
+Deep learning application for early crop disease detection using Computer Vision.
+
+**Tech Stack:** TensorFlow • CNN • OpenCV
+
+🔗 **Repository:**  
+https://github.com/Shaik-pardi-11/Plant-disease-Prediction
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### ❤️ Heart Stroke Prediction
+Machine Learning application for healthcare risk assessment and predictive analytics.
+
+**Tech Stack:** Python • Scikit-Learn • Pandas
+
+🔗 **Repository:**  
+https://github.com/Shaik-pardi-11/Heart-Stroke-Prediction
+
+</td>
+
+<td width="50%">
+
+### 💬 WikiQA
+Natural Language Processing Question Answering system using semantic similarity and ranking.
+
+**Tech Stack:** Python • NLP • Transformers
+
+🔗 **Repository:**  
+https://github.com/Shaik-pardi-11/wikiQA_A-Question-Answer-System
+
+</td>
+</tr>
+</table>
+
+---
+
+# 📊 GitHub Analytics
+
+<div align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=Shaik-pardi-11&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
+
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shaik-pardi-11&layout=compact&theme=tokyonight&hide_border=true"/>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=Shaik-pardi-11&theme=tokyonight&hide_border=true"/>
+
+</div>
+
+---
+
+# 🏆 GitHub Achievements
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=Shaik-pardi-11&theme=tokyonight&no-frame=true&row=2&column=4"/>
+
+</div>
+
+---
+
+# 📈 Contribution Graph
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Shaik-pardi-11&theme=tokyo-night&hide_border=true"/>
+
+</div>
+
+---
+
+# 📌 Quick GitHub Stats
+
+| Metric | Value |
+|---------|-------|
+| 🎯 Focus | AI • ML • Full Stack Development |
+| 💻 Languages | Python • Java • JavaScript • TypeScript |
+| 🧠 Expertise | ML • DL • RL • NLP • Computer Vision |
+| 🚀 Projects | 20+ |
+| 🌱 Currently Learning | LLMs • MLOps • Cloud • Generative AI |
+| 🤝 Open To | AI/ML Internships • Full Stack Roles • Open Source |
+
+---
