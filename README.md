@@ -1,249 +1,217 @@
-
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:302b63,100:2dd4bf&height=200&section=header&text=Shaik%20Pardi&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%7C%20Machine%20Learning%20Enthusiast%20%7C%20AI%20Problem%20Solver&descAlignY=58&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:302b63,100:2dd4bf&height=220&section=header&text=Pardeen&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20|%20AI%20Engineer%20|%20Machine%20Learning%20Enthusiast&descAlignY=60&descSize=18"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=800&color=2DD4BF&center=true&vCenter=true&width=600&lines=Building+intelligent+systems...;Turning+ideas+into+deployable+products;Open+to+ML+%2F+AI+%2F+Full-Stack+collaborations" alt="Typing SVG" />
+<br>
 
-<br/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=2DD4BF&center=true&vCenter=true&width=750&lines=Building+Intelligent+Systems...;Turning+Ideas+into+Reality...;AI+%7C+Machine+Learning+%7C+Full+Stack;Open+Source+Contributor;Always+Learning+New+Technologies"/>
 
-![GitHub Followers](https://img.shields.io/github/followers/Shaik-pardi-11?style=for-the-badge&color=302b63&labelColor=0d1117)
-![GitHub Stars](https://img.shields.io/github/stars/Shaik-pardi-11?style=for-the-badge&color=2dd4bf&labelColor=0d1117)
-![Profile Views](https://komarev.com/ghpvc/?username=Shaik-pardi-11&style=for-the-badge&color=a78bfa&labelColor=0d1117)
+<br><br>
 
-[![Email](https://img.shields.io/badge/Email-mdpardeen2006%40gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:mdpardeen2006@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Pardeen--SM-0d1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://www.linkedin.com/in/pardeen-sm)
-[![GitHub](https://img.shields.io/badge/GitHub-Shaik--pardi--11-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Shaik-pardi-11)
-[![Location](https://img.shields.io/badge/Bangalore%2C_India-0d1117?style=for-the-badge&logo=googlemaps&logoColor=EA4335)]()
+<a href="mailto:mdpardeen2006@gmail.com">
+<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+<a href="https://www.linkedin.com/in/pardeen-sm">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="https://github.com/Shaik-pardi-11">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<br><br>
+
+![](https://komarev.com/ghpvc/?username=Shaik-pardi-11&style=for-the-badge&color=2DD4BF)
+
+![](https://img.shields.io/github/followers/Shaik-pardi-11?style=for-the-badge)
+
+![](https://img.shields.io/github/stars/Shaik-pardi-11?style=for-the-badge)
 
 </div>
 
-<br/>
+---
 
-##  About Me
+# 👨‍💻 About Me
 
-I'm a **B.Tech student** building intelligent systems and practical applications that solve real-world problems. My work spans **full-stack development**, **machine learning**, and **AI solutions** — always with a focus on clean code and impact over complexity.
+```yaml
+Name:          Pardeen
+Education:     B.Tech CSE (Artificial Intelligence & Machine Learning)
+University:    Presidency University, Bengaluru
+
+Current Focus:
+  - Machine Learning
+  - Deep Learning
+  - Reinforcement Learning
+  - Full Stack Development
+  - AI Research
+
+Passion:
+  Building intelligent systems that solve real-world problems.
+
+Currently Learning:
+  - Large Language Models (LLMs)
+  - MLOps
+  - Cloud Computing
+  - Generative AI
+
+Open To:
+  - Internships
+  - AI/ML Projects
+  - Full Stack Development
+  - Open Source Collaboration
+```
+
+---
+
+# 🚀 Quick Highlights
 
 <table>
 <tr>
-<td width="50%" valign="top">
-<strong>🎓 Education</strong> — B.Tech Student<br/>
-<strong>🎯 Focus Areas</strong> — Full-Stack Dev · ML · AI Applications<br/>
-<strong>🔬 Research Interests</strong> — Autonomous Systems, Healthcare AI, AgriTech, Mental Health Analytics, Traffic Safety
+<td width="50%">
+
+### 💼 Professional
+
+- 🎓 B.Tech AI & ML Student
+- 💻 Full Stack Developer
+- 🤖 Machine Learning Engineer
+- 📊 Data Science Enthusiast
+- 🧠 AI Researcher
+- 🌱 Lifelong Learner
+
 </td>
-<td width="50%" valign="top">
-<strong>🧭 Philosophy</strong> — Clean, efficient, maintainable code<br/>
-<strong>🚀 Passion</strong> — Shipping ideas as deployable products<br/>
-<strong>📊 Activity</strong> — 20 repos · 6+ featured projects · open to collabs
+
+<td width="50%">
+
+### 🎯 Interests
+
+- Artificial Intelligence
+- Deep Learning
+- Reinforcement Learning
+- NLP
+- Computer Vision
+- Autonomous Systems
+- Healthcare AI
+- Agricultural AI
+
 </td>
 </tr>
 </table>
-<br/>
 
-##  Technical Skills
+---
 
-**Programming Languages**
-<p><img src="https://skillicons.dev/icons?i=python,java,javascript,typescript,c,cpp,html,css,sql" /></p>
+# ⚡ Tech Stack
 
-**Machine Learning & AI**
-<p>
-<img src="https://skillicons.dev/icons?i=tensorflow,pytorch" height="48"/>&nbsp;
-<img src="https://img.shields.io/badge/XGBoost-FFB000?style=for-the-badge&labelColor=0d1117&color=FFB000"/>
-<img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white&labelColor=0d1117"/>
-<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white&labelColor=0d1117"/>
-<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white&labelColor=0d1117"/>
-<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white&labelColor=0d1117"/>
+## 👨‍💻 Programming Languages
+
+<p align="center">
+
+<img src="https://skillicons.dev/icons?i=python"/>
+
+<img src="https://skillicons.dev/icons?i=java"/>
+
+<img src="https://skillicons.dev/icons?i=cpp"/>
+
+<img src="https://skillicons.dev/icons?i=c"/>
+
+<img src="https://skillicons.dev/icons?i=javascript"/>
+
+<img src="https://skillicons.dev/icons?i=typescript"/>
+
+<img src="https://skillicons.dev/icons?i=html"/>
+
+<img src="https://skillicons.dev/icons?i=css"/>
+
+<img src="https://skillicons.dev/icons?i=sql"/>
+
 </p>
 
-**Web Development & Backend**
-<p><img src="https://skillicons.dev/icons?i=react,nextjs,nodejs,express,mongodb,mysql,tailwind" /></p>
+---
 
-**Tools & Development Environment**
-<p><img src="https://skillicons.dev/icons?i=git,github,vscode,postman,figma,linux" /></p>
+## 🤖 AI • Machine Learning
 
-**Core Competencies**
+<p align="center">
 
-| Domain | Skills |
-|---|---|
-|  Machine Learning | Supervised & Unsupervised Learning, Feature Engineering, Model Optimization |
-|  Deep Learning | CNNs, RNNs, Neural Networks, Transfer Learning, Transformers |
-|  Reinforcement Learning | DQN, Risk-Aware RL, Policy Gradient Methods |
-|  NLP | Text Processing, Sentiment Analysis, Q&A Systems |
-|  Full-Stack | RESTful APIs, Frontend Integration, Database Design, Deployment |
-|  Data Analysis | Data Visualization, Statistical Analysis, Business Intelligence |
+<img src="https://skillicons.dev/icons?i=tensorflow"/>
 
-<br/>
+<img src="https://skillicons.dev/icons?i=pytorch"/>
 
-## 📈 GitHub Statistics
+<img src="https://skillicons.dev/icons?i=opencv"/>
 
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Shaik-pardi-11&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&bg_color=0d1117&title_color=2dd4bf&icon_color=a78bfa" width="49%"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shaik-pardi-11&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=2dd4bf" width="38%"/>
+<img src="https://img.shields.io/badge/Scikit-Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
 
-<img src="https://streak-stats.demolab.com?user=Shaik-pardi-11&theme=tokyonight&hide_border=true&background=0D1117&ring=2DD4BF&fire=A78BFA" width="70%"/>
-</div>
+<img src="https://img.shields.io/badge/XGBoost-FFB000?style=for-the-badge"/>
 
-<div align="center">
+<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas"/>
 
-| Metric | Value |
-|:---:|:---:|
-| Total Repositories | 20 |
-| Featured Projects | 6+ |
-| GitHub Stars | 24 |
-| Followers | 6 |
-| Most Used Language | Python |
+<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy"/>
 
-</div>
+</p>
 
-<br/>
+---
 
-## 🚀 Featured Projects
+## 🌐 Frontend
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<p align="center">
 
-**[🧭 Predictive Risk-Aware DQN for Dynamic Obstacle Avoidance](https://github.com/Shaik-pardi-11/Predictive-Risk-Aware-DQN-for-Dynamic-Obstacle-Avoidance)**
-<br>Reinforcement learning for autonomous navigation — compares Standard DQN vs. Risk-Aware DQN under moving obstacles.
-`Python` `RL` `DQN`
+<img src="https://skillicons.dev/icons?i=react"/>
 
-</td>
-<td width="50%" valign="top">
+<img src="https://skillicons.dev/icons?i=nextjs"/>
 
-**[🧠 MindGuard-AI](https://github.com/Shaik-pardi-11/MindGuard-AI)**
-<br>Full-stack mental health analytics app with a FastAPI backend and AI-powered burnout prediction.
-`FastAPI` `ML` `Full-Stack`
+<img src="https://skillicons.dev/icons?i=tailwind"/>
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<img src="https://skillicons.dev/icons?i=bootstrap"/>
 
-**[🌱 Plant Disease Prediction](https://github.com/Shaik-pardi-11/Plant-disease-Prediction)**
-Deep learning for agricultural technology — early disease detection and classification.
-`Deep Learning` `AgriTech`
+</p>
 
-</td>
-<td width="50%" valign="top">
+---
 
-**[❤️ Heart Stroke Prediction](https://github.com/Shaik-pardi-11/Heart-Stroke-Prediction)**
-Healthcare AI application with a complete deep learning pipeline for predictive analytics.
-`Healthcare AI` `Deep Learning`
+## ⚙ Backend
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<p align="center">
 
-**[🚦 VisionZero Accident Severity Predictor](https://github.com/Shaik-pardi-11/VisionZero-Accident-Severity-Predictor-software)**
-Traffic safety system that predicts accident severity and recommends interventions.
-`ML` `Public Safety`
+<img src="https://skillicons.dev/icons?i=nodejs"/>
 
-</td>
-<td width="50%" valign="top">
+<img src="https://skillicons.dev/icons?i=express"/>
 
-**[📚 wikiQA — Question Answer System](https://github.com/Shaik-pardi-11/wikiQA_A-Question-Answer-System)**
-NLP-based Q&A system using semantic similarity and sentence ranking.
-`NLP` `Semantic Search`
+<img src="https://skillicons.dev/icons?i=fastapi"/>
 
-</td>
-</tr>
-</table>
+</p>
 
-<br/>
+---
 
-## 🔭 Current Research & Learning Focus
+## 🗄 Database
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<p align="center">
 
-**Active Areas**
-- 🚗 Autonomous Systems — navigation, obstacle avoidance
-- 🏥 Healthcare AI — prediction, patient monitoring
-- 🌾 AgriTech — disease detection, yield prediction
-- 🧘 Mental Health AI — burnout & wellness analytics
-- 🚦 Traffic Safety — accident prediction & prevention
-- 💬 NLP — question answering, semantic analysis
+<img src="https://skillicons.dev/icons?i=mongodb"/>
 
-</td>
-<td width="50%" valign="top">
+<img src="https://skillicons.dev/icons?i=mysql"/>
 
-**Continuous Development**
-- Advanced deep learning architectures
-- Production ML systems & deployment
-- Cloud computing & scalability
-- Research paper implementation
-- ML CI/CD & DevOps pipelines
+<img src="https://skillicons.dev/icons?i=firebase"/>
 
-</td>
-</tr>
-</table>
+</p>
 
-<br/>
+---
 
-## 🧩 Core Expertise Areas
+## ☁ Cloud & Tools
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<p align="center">
 
-**Technical**
-- ML Fundamentals — Evaluation, Tuning
-- Deep Learning — Architecture, Optimization
-- Reinforcement Learning — Q-Learning, DQN, Reward Shaping
-- Data Engineering — ETL, Preprocessing, Feature Quality
-- Full-Stack — APIs, Backend, Database Systems
-- Software Engineering — Design Patterns, Clean Code, Testing
+<img src="https://skillicons.dev/icons?i=git"/>
 
-</td>
-<td width="50%" valign="top">
+<img src="https://skillicons.dev/icons?i=github"/>
 
-**Soft Skills**
-- 🤝 Team Collaboration & Communication
-- 🗂️ Project Management & Planning
-- 🧩 Problem-Solving & Critical Thinking
-- 📊 Data-Driven Decision Making
-- 📝 Technical Documentation
-- 📚 Self-Learning & Continuous Improvement
+<img src="https://skillicons.dev/icons?i=vscode"/>
 
-</td>
-</tr>
-</table>
+<img src="https://skillicons.dev/icons?i=linux"/>
 
-<br/>
+<img src="https://skillicons.dev/icons?i=docker"/>
 
-<div align="center">
+<img src="https://skillicons.dev/icons?i=postman"/>
 
-## 🤝 Let's Connect!
+<img src="https://skillicons.dev/icons?i=figma"/>
 
-[![Email](https://img.shields.io/badge/Email-mdpardeen2006%40gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:mdpardeen2006@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Pardeen--SM-0d1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://www.linkedin.com/in/pardeen-sm)
-[![GitHub](https://img.shields.io/badge/GitHub-Shaik--pardi--11-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Shaik-pardi-11)
+</p>
 
-**I'm open to:** Collaborations · ML/AI/Full-Stack Internships · Mentorship · Freelance Projects · Open-Source Contributions
-
-</div>
-
-<br/>
-
-> *"Build solutions that matter. Write code that lasts. Never stop learning."*
-
-**Core Principles**
-1. **Quality Over Quantity** — well-tested, maintainable, scalable code
-2. **User-Centric Design** — solutions that genuinely solve real problems
-3. **Continuous Learning** — staying current with new methods and tools
-4. **Open Collaboration** — sharing knowledge, contributing to community
-5. **Ethical AI** — responsible development, mindful of societal impact
-
-<br/>
-
-<div align="center">
-
-If my projects are useful, a ⭐ helps visibility — and I'd love to connect on LinkedIn.
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2dd4bf,100:302b63&height=120&section=footer"/>
-
-**Thanks for stopping by — let's build something amazing together.**
-
-</div>
+---
