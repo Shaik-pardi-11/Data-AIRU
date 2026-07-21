@@ -8,7 +8,8 @@
 `<img src="https://capsule-render.vercel.app/api?type=waving&color=0:302b63,100:2dd4bf&height=220&section=header&text=Pardeen&fontSize=55&fontColor=ffffff&animation=fadeIn"/>`{=html}
 ```{=html}
 </p>
-```
+``'
+.
 ```{=html}
 <p align="center">
 ```
