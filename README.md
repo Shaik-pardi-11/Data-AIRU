@@ -12,7 +12,7 @@
 ..
 ```{=html}
 <p align="center">
-```
+```.
 `<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=2DD4BF&center=true&vCenter=true&width=700&lines=Building+Intelligent+Systems;AI+%7C+Machine+Learning+%7C+Full+Stack;Always+Learning+New+Technologies"/>`{=html}
 ```{=html}
 </p>
