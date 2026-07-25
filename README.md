@@ -1,5 +1,5 @@
 # 🚀 Pardeen
-...
+..
 > **Full-Stack Developer \| AI Engineer \| Machine Learning Enthusiast**
 
 ```{=html}
